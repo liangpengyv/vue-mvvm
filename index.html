@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 双向绑定简单实现</title>
+</head>
+
+<body>
+    <div id="app">
+        <input v-model='name'>
+        <p>{{name}}</p>
+    </div>
+</body>
+
+<!-- <script src="js/vue.js"></script> -->
+<script src="js/observer.js"></script>
+<script src="js/watcher.js"></script>
+<script src="js/compile.js"></script>
+<script src="js/index.js"></script>
+<script>
+
+    // let app = new Vue({
+    //     el: '#app',
+    //     data: {
+    //         name: 'JavaScript',
+    //     }
+    // })
+    // console.log(app)
+
+    let myApp = new MyVue({
+        el: '#app',
+        data: {
+            name: 'JavaScript',
+        }
+    })
+    console.log(myApp)
+
+</script>
+
+</html>
